@@ -8,6 +8,7 @@ import br.com.javacore.Project.Model.User;
 import br.com.javacore.Project.Utils.TransactionUtils;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.UUID;
 
@@ -48,6 +49,16 @@ public class UserService {
             conn = ConnectionFactory.getConnection();
             conn.setAutoCommit(false);
 
+            User user = UserDAO.findById(conn, id);
+
+            if (user == null){
+                throw new BusinessException("Usuário não encontrado.");
+            }
+
+            if (Boolean.TRUE.equals(user.active())){
+                throw new BusinessException("Usuário já esta ativo.");
+            }
+
             UserDAO.upateActiverStatusUser(conn, id, true);
 
             conn.commit();
@@ -60,7 +71,7 @@ public class UserService {
         } finally {
             try {
                 if (conn != null) conn.close();
-            } catch (Exception ignored) {}
+            } catch (SQLException ignored) {}
         }
     }
 
@@ -72,6 +83,17 @@ public class UserService {
         try {
             conn = ConnectionFactory.getConnection();
             conn.setAutoCommit(false);
+
+            User user = UserDAO.findById(conn, id);
+
+            if (user == null){
+                throw new BusinessException("Usuário não encontrado.");
+            }
+
+            if (Boolean.FALSE.equals(user.active())){
+                throw new BusinessException("Usuário já esta desativado.");
+            }
+
 
             UserDAO.upateActiverStatusUser(conn, id, false);
 
@@ -89,7 +111,7 @@ public class UserService {
         }
     }
 
-    public static void insertUser(String id, User user){
+    public static void updateUser(String id, User user){
         validateId(id);
 
         Connection conn = null;
@@ -128,6 +150,7 @@ public class UserService {
                 NameNormalize.normalize(user.name()),
                 user.age(),
                 EmailNormalize.normalize(user.email()),
+                null,
                 null
         );
     }
@@ -164,6 +187,7 @@ public class UserService {
                 name,
                 age,
                 email,
+                null,
                 null
         );
     }

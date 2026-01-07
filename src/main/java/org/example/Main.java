@@ -23,22 +23,28 @@ public class Main {
 
         UserInputHandler inputHandler = new UserInputHandler(scanner);
 
-        System.out.println("===CADASTRO DE USUÁRIO===");
-
-        String name = inputHandler.readName();
-        int age = inputHandler.readAge();
-        String email = inputHandler.readEmail();
-
-        User user = new User(
-                null,
-                name,
-                age,
-                email,
-                null
-        );
+//        System.out.println("===CADASTRO DE USUÁRIO===");
+//
+//        String name = inputHandler.readName();
+//        int age = inputHandler.readAge();
+//        String email = inputHandler.readEmail();
+//
+//        User user = new User(
+//                null,
+//                name,
+//                age,
+//                email,
+//                null
+//        );
+//
+//        try {
+//            UserService.insertUser(user);
+//        } catch (BusinessException e){
+//            System.out.println(e.getMessage());
+//        }
 
         try {
-            UserService.insertUser(user);
+           UserService.activeUser("2692a2c7-c7c3-4d8f-a0b5-e088429caae6");
         } catch (BusinessException e){
             System.out.println(e.getMessage());
         }
@@ -57,6 +63,26 @@ public class Main {
                     u.created_at().format(formatter)
                     );
         }
+
+//        try {
+//            UserService.disableUser("2692a2c7-c7c3-4d8f-a0b5-e088429caae6");
+//        } catch (BusinessException e){
+//            System.out.println(e.getMessage());
+//        }
+//
+//        users = UserService.findAllUsers();
+//
+//        System.out.println("===LISTA DE USUÁRIOS===");
+//
+//        for (User u : users){
+//            System.out.printf("Id: %s | Nome: %s | Idade: %d | Email: %s | Data de criação: %s%n",
+//                    u.id(),
+//                    u.name(),
+//                    u.age(),
+//                    u.email(),
+//                    u.created_at().format(formatter)
+//            );
+//        }
 
         scanner.close();
     }

@@ -53,6 +53,7 @@ public class UserDAO {
                         rs.getString("name"),
                         rs.getInt("age"),
                         rs.getString("email"),
+                        rs.getBoolean("active"),
                         rs.getTimestamp("created_at").toLocalDateTime()
                 ));
             }
@@ -124,6 +125,33 @@ public class UserDAO {
         } catch (SQLException e){
             log.error("Erro ao atualizar informações do usuário.", e);
             throw new DataAccessException("Erro ao atualizar informações do usuário.");
+        }
+    }
+
+    public static User findById(Connection conn, String id){
+        String sql = "SELECT * FROM users WHERE id = ?;";
+
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)){
+
+            pstmt.setString(1, id);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            if (!rs.next()){
+                return null;
+            }
+
+            return new User(
+                    rs.getString("id"),
+                    rs.getString("name"),
+                    rs.getInt("age"),
+                    rs.getString("email"),
+                    rs.getBoolean("active"),
+                    rs.getTimestamp("created_at").toLocalDateTime()
+            );
+        } catch (SQLException e){
+            log.error("Erro ao buscar usuário.", e);
+            throw new DataAccessException("Erro ao buscar usuário");
         }
     }
 }

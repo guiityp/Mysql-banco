@@ -7,6 +7,7 @@ public record User(
         String name,
         int age,
         String email,
+        Boolean active,
         LocalDateTime created_at
 ) {
 }
