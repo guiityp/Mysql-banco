@@ -14,3 +14,24 @@
 2026-01-07 00:07:07,670 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76f10035
 2026-01-07 00:07:07,671 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
 2026-01-07 00:07:07,673 INFO o.e.Main [main] Conexão com o banco de dados estabelecida com sucesso.
+2026-01-07 02:58:33,275 INFO o.f.c.FlywayExecutor [main] Database: jdbc:mysql://localhost:3306/banco_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 9.5)
+2026-01-07 02:58:33,528 WARN o.f.c.i.d.b.Database [main] Using MySQL 9.5 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+2026-01-07 02:58:33,569 INFO o.f.c.i.c.DbValidate [main] Successfully validated 1 migration (execution time 00:00.029s)
+2026-01-07 02:58:33,585 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `banco_db`: 1
+2026-01-07 02:58:33,588 INFO o.f.c.i.c.DbMigrate [main] Schema `banco_db` is up to date. No migration necessary.
+2026-01-07 03:00:44,005 INFO o.f.c.FlywayExecutor [main] Database: jdbc:mysql://localhost:3306/banco_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 9.5)
+2026-01-07 03:00:44,255 WARN o.f.c.i.d.b.Database [main] Using MySQL 9.5 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+2026-01-07 03:00:44,298 INFO o.f.c.i.c.DbValidate [main] Successfully validated 1 migration (execution time 00:00.029s)
+2026-01-07 03:00:44,315 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `banco_db`: 1
+2026-01-07 03:00:44,318 INFO o.f.c.i.c.DbMigrate [main] Schema `banco_db` is up to date. No migration necessary.
+2026-01-07 03:01:02,313 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2026-01-07 03:01:02,339 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fd9b663
+2026-01-07 03:01:02,340 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2026-01-07 03:02:17,217 INFO o.f.c.FlywayExecutor [main] Database: jdbc:mysql://localhost:3306/banco_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 9.5)
+2026-01-07 03:02:17,470 WARN o.f.c.i.d.b.Database [main] Using MySQL 9.5 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+2026-01-07 03:02:17,515 INFO o.f.c.i.c.DbValidate [main] Successfully validated 1 migration (execution time 00:00.031s)
+2026-01-07 03:02:17,532 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `banco_db`: 1
+2026-01-07 03:02:17,535 INFO o.f.c.i.c.DbMigrate [main] Schema `banco_db` is up to date. No migration necessary.
+2026-01-07 03:02:17,557 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2026-01-07 03:02:17,574 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b65e559
+2026-01-07 03:02:17,575 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.

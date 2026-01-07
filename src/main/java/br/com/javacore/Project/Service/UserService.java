@@ -26,7 +26,7 @@ public class UserService {
             throw TransactionUtils.rollbackAndThrow(
                     conn,
                     e,
-                    new BusinessException("Erro ao salvar insert do usuário.")
+                    new BusinessException("Erro ao salvar usuário.")
             );
         } finally {
             try {
@@ -105,7 +105,7 @@ public class UserService {
             throw TransactionUtils.rollbackAndThrow(
                     conn,
                     e,
-                    new BusinessException("Erro ao salvar alterações no usuário.")
+                    new BusinessException("Erro ao salvar alterações do usuário.")
             );
         } finally {
             try {

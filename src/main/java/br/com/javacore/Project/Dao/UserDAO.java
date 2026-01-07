@@ -29,6 +29,11 @@ public class UserDAO {
 
             pstmt.executeUpdate();
         } catch (SQLException e){
+
+            if ("23000".equals(e.getSQLState())){
+                throw new BusinessException("Email já cadastrado.");
+            }
+
             log.error("Erro ao inserir usuário.", e);
             throw new DataAccessException("Erro ao inserir usuário.");
         }
