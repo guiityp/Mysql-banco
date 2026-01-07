@@ -1,0 +1,16 @@
+2026-01-07 00:03:30,138 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2026-01-07 00:03:30,374 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@344f4dea
+2026-01-07 00:03:30,376 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2026-01-07 00:03:30,378 INFO o.e.Main [main] Conexão com o banco de dados estabelecida com sucesso.
+2026-01-07 00:07:07,081 INFO o.f.c.FlywayExecutor [main] Database: jdbc:mysql://localhost:3306/banco_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 9.5)
+2026-01-07 00:07:07,342 WARN o.f.c.i.d.b.Database [main] Using MySQL 9.5 which is newer than the version Flyway has been verified with. The latest verified version of MySQL is 9.4.
+2026-01-07 00:07:07,370 INFO o.f.c.i.s.JdbcTableSchemaHistory [main] Schema history table `banco_db`.`flyway_schema_history` does not exist yet
+2026-01-07 00:07:07,373 INFO o.f.c.i.c.DbValidate [main] Successfully validated 1 migration (execution time 00:00.019s)
+2026-01-07 00:07:07,391 INFO o.f.c.i.s.JdbcTableSchemaHistory [main] Creating Schema History table `banco_db`.`flyway_schema_history` ...
+2026-01-07 00:07:07,527 INFO o.f.c.i.c.DbMigrate [main] Current version of schema `banco_db`: << Empty Schema >>
+2026-01-07 00:07:07,538 INFO o.f.c.i.c.DbMigrate [main] Migrating schema `banco_db` to version "1 - create table user"
+2026-01-07 00:07:07,633 INFO o.f.c.i.c.DbMigrate [main] Successfully applied 1 migration to schema `banco_db`, now at version v1 (execution time 00:00.066s)
+2026-01-07 00:07:07,652 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2026-01-07 00:07:07,670 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76f10035
+2026-01-07 00:07:07,671 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2026-01-07 00:07:07,673 INFO o.e.Main [main] Conexão com o banco de dados estabelecida com sucesso.
